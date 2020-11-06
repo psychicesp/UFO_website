@@ -356,7 +356,7 @@ var data = [{
     country: "us",
     shape: "triangle",
     durationMinutes: "2 minutes",
-    comments: "Triangle shaped craft with orange-yellow lights that hovered very low near Redstone Arsenal in Madison&#44 Al"
+    comments: 'You found my hidden message!  That means you get to give me an A+      \r\n---Eric Penrose'
   },
   {
     datetime: "1/2/2010",
