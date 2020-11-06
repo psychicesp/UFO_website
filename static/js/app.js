@@ -68,7 +68,7 @@ filter.on("click", function () {
         tableData = tableData.filter(shapeFilter)
     }
     d3.event.preventDefault()
-    d3.selectAll("tr").remove()
+    d3.selectAll("td").remove()
     inputDate = datetime.property("value")
     buildTable(tableData)
     tableData = data
