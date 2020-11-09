@@ -13,6 +13,7 @@ function buildTable(tdata) {
     });
 }
 buildTable(tableData)
+
 // datetime Form:
 var datetime = d3.select("#datetime")
 function datetimeFilter(entry) {
@@ -44,9 +45,14 @@ function shapeFilter(entry) {
     return entry.shape == inputShape
 }
 
-//Filter Button:
+//Build initial table
+buildTable(tableData)
+
+
+//Filter Button to rebuild table:
 var filter = d3.select('#filter-btn')
 filter.on("click", function () {
+    d3.event.preventDefault()
     if (datetime.property("value")){
         inputDate = datetime.property("value")
         tableData = tableData.filter(datetimeFilter)
@@ -67,7 +73,6 @@ filter.on("click", function () {
         inputShape = shape.property("value")
         tableData = tableData.filter(shapeFilter)
     }
-    d3.event.preventDefault()
     d3.selectAll("td").remove()
     inputDate = datetime.property("value")
     buildTable(tableData)
