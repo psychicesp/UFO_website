@@ -54,27 +54,26 @@ var filter = d3.select('#filter-btn')
 filter.on("click", function () {
     d3.event.preventDefault()
     if (datetime.property("value")){
-        inputDate = datetime.property("value")
+        inputDate = datetime.property("value").toLowerCase()
         tableData = tableData.filter(datetimeFilter)
     }
     if (city.property("value")){
-        inputCity = city.property("value")
+        inputCity = city.property("value").toLowerCase()
         tableData = tableData.filter(cityFilter)
     }
     if (state.property("value")){
-        inputState = state.property("value")
+        inputState = state.property("value").toLowerCase()
         tableData = tableData.filter(stateFilter)
     }
     if (country.property("value")){
-        inputCountry = country.property("value")
+        inputCountry = country.property("value").toLowerCase()
         tableData = tableData.filter(countryFilter)
     }
     if (shape.property("value")){
-        inputShape = shape.property("value")
+        inputShape = shape.property("value").toLowerCase()
         tableData = tableData.filter(shapeFilter)
     }
     d3.selectAll("td").remove()
-    inputDate = datetime.property("value")
     buildTable(tableData)
     tableData = data
 })
