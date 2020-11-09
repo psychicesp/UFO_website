@@ -49,7 +49,7 @@ function shapeFilter(entry) {
 buildTable(tableData)
 
 
-//Filter Button to rebuild table:
+//Filter Button to rebuild table based on entered filters:
 var filter = d3.select('#filter-btn')
 filter.on("click", function () {
     d3.event.preventDefault()
